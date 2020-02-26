@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nav_graph_home" type="id" />
+    <item name="nav_graph_account" type="id" />
+    <item name="nav_graph_timeline" type="id" />
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_app"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.github.droibit.android.sample.dynamicfeature.navigation.launch.LaunchFragment"
+        android:label="LaunchFragment">
+        <action
+            android:id="@+id/toHome"
+            app:destination="@id/nav_graph_home"
+            app:popUpTo="@id/nav_graph_app" />
+        <action
+            android:id="@+id/toAccount"
+            app:destination="@id/nav_graph_account"
+            app:popUpTo="@id/nav_graph_app" />
+    </fragment>
+
+    <include-dynamic
+        android:id="@id/nav_graph_home"
+        app:graphPackage="com.github.droibit.android.sample.dynamicfeature.navigation.home"
+        app:graphResName="nav_graph_home"
+        app:moduleName="@string/title_home">
+
+        <action
+            android:id="@id/nav_graph_timeline"
+            app:destination="@id/nav_graph_timeline" />
+    </include-dynamic>
+
+    <include-dynamic
+        android:id="@id/nav_graph_account"
+        app:graphPackage="com.github.droibit.android.sample.dynamicfeature.navigation.account"
+        app:graphResName="nav_graph_account"
+        app:moduleName="@string/title_account">
+        <argument
+            android:name="needsSignIn"
+            app:argType="boolean" />
+        <action
+            android:id="@id/nav_graph_home"
+            app:destination="@id/nav_graph_home"
+            app:popUpTo="@id/nav_graph_app" />
+    </include-dynamic>
+
+    <include-dynamic
+        android:id="@id/nav_graph_timeline"
+        app:graphPackage="com.github.droibit.android.sample.dynamicfeature.navigation.timeline"
+        app:graphResName="nav_graph_timeline"
+        app:moduleName="@string/title_timeline">
+        <argument
+            android:name="timelineType"
+            app:argType="integer" />
+    </include-dynamic>
+</navigation>

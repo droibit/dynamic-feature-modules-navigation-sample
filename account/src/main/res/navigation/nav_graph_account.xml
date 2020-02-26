@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/nav_graph_account"
+    app:startDestination="@id/accountStartDestinationFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/accountStartDestinationFragment"
+        android:name="com.github.droibit.android.sample.dynamicfeature.navigation.account.StartDestinationFragment">
+        <action
+            android:id="@+id/toAccountList"
+            app:destination="@id/accountListFragment"
+            app:popUpTo="@id/nav_graph_account" />
+        <action
+            android:id="@+id/toSignIn"
+            app:destination="@id/twitterSignInFragment"
+            app:popUpTo="@id/nav_graph_account" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountListFragment"
+        android:name="com.github.droibit.android.sample.dynamicfeature.navigation.account.AccountListFragment"
+        android:label="AccountListFragment">
+        <action
+            android:id="@+id/toTwitterSignIn"
+            app:destination="@id/twitterSignInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twitterSignInFragment"
+        android:name="com.github.droibit.android.sample.dynamicfeature.navigation.account.TwitterSignInFragment"
+        android:label="TwitterSignInFragment" />
+</navigation>

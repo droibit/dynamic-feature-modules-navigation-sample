@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/nav_graph_timeline"
+    app:startDestination="@id/timelineStartDestinationFragment"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/timelineStartDestinationFragment"
+        android:name="com.github.droibit.android.sample.dynamicfeature.navigation.timeline.StartDestinationFragment">
+        <action
+            android:id="@+id/toTimeline"
+            app:destination="@id/timelineFragment"
+            app:popUpTo="@id/nav_graph_timeline" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/timelineFragment"
+        android:name="com.github.droibit.android.sample.dynamicfeature.navigation.timeline.TimelineFragment"
+        android:label="TimelineFragment">
+        <argument
+            android:name="timelineType"
+            app:argType="com.github.droibit.android.sample.dynamicfeature.navigation.timeline.TimelineType" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">dfm-navigation-sample</string>
+    <string name="title_home" translatable="false">home</string>
+    <string name="title_account" translatable="false">account</string>
+    <string name="title_timeline" translatable="false">timeline</string>
+      <string name="title_tweet" translatable="false">tweet</string>
+</resources>
