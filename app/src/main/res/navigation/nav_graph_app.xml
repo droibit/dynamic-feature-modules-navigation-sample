@@ -23,10 +23,6 @@
         app:graphPackage="com.github.droibit.android.sample.dynamicfeature.navigation.home"
         app:graphResName="nav_graph_home"
         app:moduleName="@string/title_home">
-
-        <action
-            android:id="@id/nav_graph_timeline"
-            app:destination="@id/nav_graph_timeline" />
     </include-dynamic>
 
     <include-dynamic
@@ -37,10 +33,6 @@
         <argument
             android:name="needsSignIn"
             app:argType="boolean" />
-        <action
-            android:id="@id/nav_graph_home"
-            app:destination="@id/nav_graph_home"
-            app:popUpTo="@id/nav_graph_app" />
     </include-dynamic>
 
     <include-dynamic
@@ -52,4 +44,8 @@
             android:name="timelineType"
             app:argType="integer" />
     </include-dynamic>
+
+<!--    <action android:id="@+id/toHome"-->
+<!--        app:destination="@id/nav_graph_home"-->
+<!--        app:popUpTo="@id/nav_graph_app" />-->
 </navigation>

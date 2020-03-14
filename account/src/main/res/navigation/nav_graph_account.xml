@@ -30,5 +30,6 @@
     <fragment
         android:id="@+id/twitterSignInFragment"
         android:name="com.github.droibit.android.sample.dynamicfeature.navigation.account.TwitterSignInFragment"
-        android:label="TwitterSignInFragment" />
+        android:label="TwitterSignInFragment">
+    </fragment>
 </navigation>
