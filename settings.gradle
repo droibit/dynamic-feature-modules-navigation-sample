@@ -1,1 +1,1 @@
-include ':app', ':home', ':account', ':timeline', ':tweet'
+include ':app', ':core', ':home', ':account', ':timeline', ':tweet'
